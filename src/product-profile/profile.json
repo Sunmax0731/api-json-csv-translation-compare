@@ -1,0 +1,19 @@
+{
+  "name": "api-json-csv-translation-compare",
+  "title": "API・JSON・CSV・翻訳比較ツール",
+  "domain": "WindowsApp",
+  "kind": "windows-app",
+  "host": null,
+  "field": "データ比較",
+  "audience": "API、CSV、翻訳文言を横断確認する開発者/運用者",
+  "workflow": "APIレスポンス、JSON、CSV、翻訳キーを同じ比較モデルへ正規化して差分確認する。",
+  "requiredFields": [
+    "sourceName",
+    "targetName",
+    "key",
+    "expectedValue"
+  ],
+  "warningField": "semanticMismatch",
+  "warningMessage": "値は存在しますが意味差分の手動確認が必要です。",
+  "qcdsTarget": "A-以上。closed alphaではS-を基準とする。"
+}

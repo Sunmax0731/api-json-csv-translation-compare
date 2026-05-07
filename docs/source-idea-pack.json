@@ -1,0 +1,32 @@
+{
+  "pickupRank": 48,
+  "domain": "WindowsApp",
+  "ideaNo": 11,
+  "idea": "API・JSON・CSV・翻訳比較ツール",
+  "repository": "api-json-csv-translation-compare",
+  "publish": "GitHub Release / BOOTH",
+  "createdIdeaFolder": "D:/AI/WindowsApp/created_idea_011_api-json-csv-translation-compare",
+  "zipFile": "D:/AI/WindowsApp/created_idea_011_api-json-csv-translation-compare/idea_011_api-json-csv-translation-compare.zip",
+  "zipDocumentsChecked": [
+    "metadata.json",
+    "README.md",
+    "01_REQUIREMENTS.md",
+    "02_SPECIFICATION.md",
+    "03_DESIGN.md",
+    "04_IMPLEMENTATION_PLAN.md",
+    "05_TEST_PLAN.md",
+    "06_RELEASE_CHECKLIST.md"
+  ],
+  "zipMetadataRepositoryName": "api-json-csv-translation-compare",
+  "zipMetadataMatchedRepository": true,
+  "existingRepositoryReadmeAtStart": "存在しない",
+  "domainDocsRead": [
+    "D:/AI/IDEAS/WindowsApp/Design.md",
+    "D:/AI/IDEAS/WindowsApp/Architecture.md",
+    "D:/AI/IDEAS/WindowsApp/AGENTS.md",
+    "D:/AI/IDEAS/WindowsApp/SKILL.md",
+    "D:/AI/WindowsApp/AGENTS.md",
+    "D:/AI/WindowsApp/SKILL.md"
+  ],
+  "hostInference": null
+}
