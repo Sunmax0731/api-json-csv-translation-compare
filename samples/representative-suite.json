@@ -1,0 +1,108 @@
+[
+  {
+    "id": "happy-path",
+    "description": "必須項目がそろい、警告もない代表成功ケース。",
+    "input": {
+      "items": [
+        {
+          "id": "happy-path",
+          "sourceName": "source-api",
+          "targetName": "target-csv",
+          "key": "ui.submit",
+          "expectedValue": "送信"
+        }
+      ]
+    },
+    "expected": {
+      "overall": "pass",
+      "counts": {
+        "pass": 1,
+        "warning": 0,
+        "fail": 0
+      }
+    }
+  },
+  {
+    "id": "missing-required",
+    "description": "必須項目が欠落し、失敗として扱うケース。",
+    "input": {
+      "items": [
+        {
+          "id": "missing-required",
+          "targetName": "target-csv",
+          "key": "ui.submit",
+          "expectedValue": "送信"
+        }
+      ]
+    },
+    "expected": {
+      "overall": "fail",
+      "counts": {
+        "pass": 0,
+        "warning": 0,
+        "fail": 1
+      }
+    }
+  },
+  {
+    "id": "warning",
+    "description": "自動判定では進められるが、手動確認を要求するケース。",
+    "input": {
+      "items": [
+        {
+          "id": "warning",
+          "sourceName": "source-api",
+          "targetName": "target-csv",
+          "key": "ui.submit",
+          "expectedValue": "送信",
+          "semanticMismatch": true
+        }
+      ]
+    },
+    "expected": {
+      "overall": "warning",
+      "counts": {
+        "pass": 0,
+        "warning": 1,
+        "fail": 0
+      }
+    }
+  },
+  {
+    "id": "mixed-batch",
+    "description": "成功、警告、失敗が混在するバッチ検証ケース。",
+    "input": {
+      "items": [
+        {
+          "id": "mixed-pass",
+          "sourceName": "source-api",
+          "targetName": "target-csv",
+          "key": "ui.submit",
+          "expectedValue": "送信"
+        },
+        {
+          "id": "mixed-warning",
+          "sourceName": "source-api",
+          "targetName": "target-csv",
+          "key": "ui.submit",
+          "expectedValue": "送信",
+          "semanticMismatch": true
+        },
+        {
+          "id": "mixed-fail",
+          "sourceName": "source-api",
+          "key": "ui.submit",
+          "expectedValue": "送信"
+        }
+      ]
+    },
+    "expected": {
+      "overall": "fail",
+      "counts": {
+        "pass": 1,
+        "warning": 1,
+        "fail": 1
+      }
+    }
+  }
+]
